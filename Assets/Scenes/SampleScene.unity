@@ -6395,7 +6395,7 @@ PrefabInstance:
     - target: {fileID: 4667525674951913188, guid: 887e639d6e8ba3d49b31741f20a330ed, type: 3}
       propertyPath: _waves.Array.data[0].Enemies.Array.data[0]
       value: 
-      objectReference: {fileID: 675766367501718822, guid: 6be9c5cab9a8d2b45a249af6ac59ebd6, type: 3}
+      objectReference: {fileID: 3263212435673967357, guid: e8f0caedc10d41449a06d530468d2b06, type: 3}
     - target: {fileID: 6786448630827087353, guid: 887e639d6e8ba3d49b31741f20a330ed, type: 3}
       propertyPath: m_Name
       value: Spawner
