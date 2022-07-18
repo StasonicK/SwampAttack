@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
@@ -48,7 +50,8 @@ public class Spawner : MonoBehaviour
 
     private void InstantiateEnemy()
     {
-        Enemy enemy = Instantiate(_currentWave.Template, _spawnPoint.position, _spawnPoint.rotation, _spawnPoint)
+        GameObject enemyGameObject = _currentWave.Enemies[Random.Range(0,_currentWave.Enemies.Count)];
+        Enemy enemy = Instantiate(enemyGameObject, _spawnPoint.position, _spawnPoint.rotation, _spawnPoint)
             .GetComponent<Enemy>();
         enemy.Init(_player);
         enemy.Dying += OnEnemyDying;
@@ -75,7 +78,7 @@ public class Spawner : MonoBehaviour
 [Serializable]
 public class Wave
 {
-    public GameObject Template;
+    public List<GameObject> Enemies;
     public float Delay;
     public int Count;
 }
