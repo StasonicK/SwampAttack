@@ -18,7 +18,7 @@ public class Uzi : Weapon
         for (int i = 0; i < 3; i++)
         {
             Instantiate(Bullet, shootPosition.position, Quaternion.identity);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.2f);
         }
     }
 }

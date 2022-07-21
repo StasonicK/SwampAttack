@@ -1,18 +1,16 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] private List<Weapon> _weapons;
     [SerializeField] private Player _player;
     [SerializeField] private WeaponView _template;
     [SerializeField] private GameObject _itemContainer;
 
     private void Start()
     {
-        for (int i = 0; i < _weapons.Count; i++)
+        for (int i = 0; i < _player.Weapons.Count; i++)
         {
-            AddItem(_weapons[i]);
+            AddItem(_player.Weapons[i]);
         }
     }
 
